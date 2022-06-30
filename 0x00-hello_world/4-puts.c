@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*
- * main - entry
+/**
+ * main - Entry point
  *
- * Return is always 0
- * puts print output to screen
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 
 {

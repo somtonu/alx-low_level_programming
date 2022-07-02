@@ -13,6 +13,9 @@ int main(void)
 
 {
 	putchar(ch);
+}
+
+{	
 	putchar('\n');
 }
 

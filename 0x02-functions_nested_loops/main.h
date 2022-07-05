@@ -1,4 +1,20 @@
-void print_alphabet(void);
+#include <stdio.h>
+void print_alphabet(void)
+{
+	int l = 97;
+
+	while (l <= 122)
+{
+	putchar(l);
+	
+	l++;
+}
+
+{
+	putchar('\n');
+}
+
+}
 void print_alphabet_x10(void);
 int _islower(int c);
 int print_last_digit(int);

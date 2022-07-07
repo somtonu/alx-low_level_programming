@@ -13,11 +13,11 @@ int main(void)
 
 	i = 0;
 
-/* while loop avoided */
-{
-	putchar(i);
-}
-
+/**
+ * while loop avoided
+ * remove putchar(i); as loop function has been taken out
+ * leaving the putchar(i); would still give desired output when compiled
+*/
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);

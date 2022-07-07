@@ -13,7 +13,7 @@ int main(void)
 
 	i = 0;
 
-/* while loop avoided */
+/* while (i < 10) loop avoided */
 /* { */
 /* removed putchar(i); leaving it would still give desired output */
 /* } */

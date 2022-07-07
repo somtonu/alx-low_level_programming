@@ -15,9 +15,9 @@ int main(void)
 
 /**
  * while loop avoided
- * remove putchar(i); as loop function has been taken out
- * leaving the putchar(i); would still give desired output when compiled
+ * remove putchar(i); leaving it would still give desired output
 */
+
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);

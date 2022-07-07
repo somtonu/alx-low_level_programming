@@ -20,4 +20,7 @@ void print_times_table(int n);
 void print_spaces(int n);
 void print_zero(void);
 int _isupper(int);
+int _isdigit(int);
+int mul(int, int);
+
 #endif

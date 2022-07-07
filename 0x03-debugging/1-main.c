@@ -13,10 +13,10 @@ int main(void)
 
 	i = 0;
 
-/**
- * while loop avoided
- * remove putchar(i); leaving it would still give desired output
-*/
+/* while loop avoided */
+/* remove putchar(i); leaving it would still give desired output */
+/* curly brackets */
+/* { } */
 
 	printf("Infinite loop avoided! \\o/\n");
 

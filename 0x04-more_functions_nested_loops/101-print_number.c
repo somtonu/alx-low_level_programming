@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 
 /**
 * print_number - prints an integer
@@ -11,7 +11,9 @@ void print_number(int n)
 	int a, b, c = 1, d = n % 10;
 
 	n /= 10;
+
 	a = n;
+
 	if (d < 0)
 {
 	d *= -1, a *= -1, n *= -1;
@@ -27,10 +29,13 @@ void print_number(int n)
 	while (c > 0)
 {
 	b = n / c;
-	_putchar(b + '0');
+
+	_putchar('0' + b);
+
 	n -= b * c;
+
 	c /= 10;
 }
 }
-	_putchar(d + '0');
+	_putchar('0' + d);
 }

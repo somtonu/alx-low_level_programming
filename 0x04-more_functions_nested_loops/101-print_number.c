@@ -1,41 +1,41 @@
-include "main.h"
+#include "main.h"
 
 /**
-* print_number - prints an integer
+* print_number - prints int
 * @n: the integer to print
 *
 * Return: void
 */
 void print_number(int n)
 {
-	int a, b, c = 1, d = n % 10;
+	int copy, nth, size = 1, ones = n % 10;
 
 	n /= 10;
 
-	a = n;
+	copy = n;
 
-	if (d < 0)
+	if (ones < 0)
 {
-	d *= -1, a *= -1, n *= -1;
+	ones *= -1, copy *= -1, n *= -1;
 
 	_putchar('-');
 }
-	if (a > 0)
-
-	while (a / 10 != 0)
+	if (copy > 0)
 {
-	a /= 10, c *= 10;
-}
-	while (c > 0)
+	while (copy / 10 != 0)
 {
-	b = n / c;
+	copy /= 10, size *= 10;
+}
+	while (size > 0)
+{
+	nth = n / size;
 
-	_putchar('0' + b);
+	_putchar('0' + nth);
 
-	n -= b * c;
+	n -= nth * size;
 
-	c /= 10;
+	size /= 10;
 }
 }
-	_putchar('0' + d);
+	_putchar('0' + ones);
 }

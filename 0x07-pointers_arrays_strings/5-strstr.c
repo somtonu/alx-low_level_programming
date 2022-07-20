@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * *_strstr - points str
  * @haystack: str to search

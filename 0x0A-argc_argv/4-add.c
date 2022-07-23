@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 
 	if (argc < 3)
 {
-	printf("%d\n", 0)
+	printf("%d\n", 0);
 	return (0);
 }
 	while (argc-- && argc > 0)
@@ -36,4 +36,5 @@ int main(int argc, char **argv)
 }
 	printf("%d\n", sum);
 	return (sum);
+}
 }

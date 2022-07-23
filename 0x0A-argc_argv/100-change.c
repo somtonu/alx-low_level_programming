@@ -2,51 +2,45 @@
 #include <stdlib.h>
 /**
  * main - function
- * @argc: int arg
- * @argv: arrays
+ * @argc: an integer
+ * @argv: an array of strings
  * Return: an int
  */
-int main(int argc, char **argv)
-{
-	int val;
-	int c = 0;
 
-	if (argc != 2)
+int main(int argc, char *argv[])
+{
+	int i;
+	unsigned int val[] = {25, 10, 5, 2, 1};
+	unsigned int zcoins = 0, amt, rem;
+
+	if (argc > 2 || argc == 1)
 {
 	printf("Error\n");
 	return (1);
 }
-	val = atoi(argv[1]);
-
-	if (val < 0)
+	if (atoi(*(argv + 1)) < 0)
 {
 	printf("%d\n", 0);
+	return (0);
 }
-	if (val % 25 >= 0)
+	if (argc == 2)
 {
-	c = c + val / 25;
-	val = val % 25;
-}
-	if (val % 10 >= 0)
+	amt = atoi(*(argv + 1));
+	for (i = 0; i <= 4; i++)
 {
-	c = c + val / 10;
-	val = val % 10;
-}
-	if (val % 5 >= 0)
+	if (amt >= val[i])
 {
-	c = c + val / 5;
-	val = val % 5;
+	zcoins += amt / val[i];
+	rem = amt % val[i];
 }
-	if (val % 2 >= 0)
-{
-	c = c + val / 2;
-	val = val % 2;
+	else
+	continue;
+	if (rem == 0)
+	break;
+	amt = rem;
 }
-	if (val % 1 >= 0)
-{
-	c += val / 1;
-	val = val % 1;
+	printf("%d\n", zcoins);
+	return (0);
 }
-	printf("%d\n", c);
 	return (0);
 }

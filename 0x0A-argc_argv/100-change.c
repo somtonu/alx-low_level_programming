@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	c = c + val / 2;
 	val = val % 2;
 }
-	if ( val % 1 >= 0)
+	if (val % 1 >= 0)
 {
 	c += val / 1;
 	val = val % 1;

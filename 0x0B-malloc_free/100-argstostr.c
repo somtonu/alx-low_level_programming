@@ -49,12 +49,14 @@ char *argstostr(int ac, char **av)
 {
 	len = _strlen(av[i]);
 
-	for (j = 0; j < len; j++, k++)
+	for (j = 0; j < len; j++)
 {
-	*p = av[i][j];
+	*q = av[i][j];
+	q++;
 }
-	*p = '\n';
+	*q = '\n';
+	q++;
 }
-	*p = '\0';
+	*q = '\0';
 	return (p);
 }

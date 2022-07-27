@@ -1,7 +1,5 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * _strlen - length of a string
  * @s: input char
@@ -14,14 +12,14 @@ int _strlen(char *s)
 
 	while (*s != '\0')
 	{
-		s++;
 		l++;
+		s++;
 	}
 	return (l);
 }
 
 /**
- * argstostr - concat
+ * argstostr - concat all arguments in folder
  * @ac: count
  * @av: vector
  * Return: string
@@ -29,38 +27,34 @@ int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int len, R = 0;
-	char *p;
+	int i, j, len, ovr = 0;
+	char *p, *q;
 
 	if (!ac || !av)
-	{
-		return (NULL);
-	}
-	R = 0;
-
+{
+	return (NULL);
+}
 	for (i = 0; i < ac; i++)
-	{
-		len = _strlen(av[i]) + 1;
-		R += len;
-	}
-	p = malloc(sizeof(char) * R + 1);
+{
+	ovr += _strlen(av[i]) + 1;
+}
+	p = malloc(sizeof(char) * (ovr + 1));
+	q = p;
 
 	if (!p)
-	{
-		return (NULL);
-	}
-
+{
+	return (NULL);
+}
 	for (i = 0; i < ac; i++)
-	{
-		len = _strlen(av[i]);
+{
+	len = _strlen(av[i]);
 
-		for (j = 0; j < len; j++, k++)
-		{
-			p[k] = av[i][j];
-		}
-		p[k++] = '\n';
-	}
-	p[k] = '\0';
+	for (j = 0; j < len; j++, k++)
+{
+	*p = av[i][j];
+}
+	*p = '\n';
+}
+	*p = '\0';
 	return (p);
 }

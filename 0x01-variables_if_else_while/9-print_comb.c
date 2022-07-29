@@ -1,27 +1,24 @@
 #include <stdio.h>
 /**
-* main - program prints numbers ten
+* main - program prints single combo no.
 *
 * Return: 0
 */
 int main(void)
 {
-	int n;
+	int n = '0';
 
-	for (n = 0; n <= 9; n++)
+	while (n <= '9')
 {
-	putchar(n + '0');
+	putchar(n);
 
-	if (n < 9)
+	if (n != '9')
 {
 	putchar(',');
 	putchar(' ');
 }
+	n++;
 }
-
-{
 	putchar('\n');
-}
-
 	return (0);
 }

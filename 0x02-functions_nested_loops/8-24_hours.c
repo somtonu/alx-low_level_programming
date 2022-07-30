@@ -23,3 +23,31 @@ void jack_bauer(void)
 }
 }
 }
+
+/* alternative use of for loops */
+void jack_bauer(void)
+{
+	char i, j, k, l;
+
+	for (i = '0'; i < '3'; i++) /* first loop for first digit */
+{
+	for (j = '0'; j <= '9'; j++)
+{
+	for (k = '0'; k <= '5'; k++) /* first digit of the 24h clock, cannot be greater than 5 */
+{
+	for (l = '0'; l <= '9'; l++)
+{
+	if (i == '2' && j > '3') /* this condition is included as the maximum hour on the 24h clock is 23, so numbers greater than 23 is omitted */
+	continue; /* used to skip a condition, and move on to the next iteration in the loop, in this case 24 to 29 is omitted */
+	putchar(i);
+	putchar(j);
+	putchar(':');
+	putchar(k);
+	putchar(l);
+	putchar('\n');
+}
+}
+}
+} /* end of loop */
+	return; /* void return, can also be omitted */
+}

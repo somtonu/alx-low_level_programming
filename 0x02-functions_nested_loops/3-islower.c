@@ -15,3 +15,22 @@ int _islower(int c)
 	return (0);
 }
 }
+
+/* this is another way of solving this, redoing tasks to grab a better understanding of c */
+/* note; the code doesn't follow the task standard */
+int _islower(int c)
+	char a[] = "abcdefghijklmnopqrstuvwxyz"; /* the alphabet */
+	int i = 0; /* this is used to increment the array */
+
+	while (a[i] != '\0') /* given a[] does not exceed a[27] which is the end of file */
+{
+	i++;
+
+/* while looping if the prototype int c equals the character in the array a[i] the return value is printed */
+	if (c == a[i]) 
+{
+	return (1);
+}
+} /* end of loop */
+	return (0);
+}

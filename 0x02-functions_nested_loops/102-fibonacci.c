@@ -8,19 +8,19 @@
  */
 void fib(int n)
 {
-	int m, nacci = 2, prev = 1;
+	long int m, nacci = 2, prev = 1;
 
 	for (m = 1; m <= n; m++)
 {
 	if (m <= 2)
 {
-	printf("%d, ", m);
+	printf("%ld, ", m);
 }
 	else
 {
 	nacci += prev;
 	prev = nacci - prev;
-	printf("%d, ", nacci);
+	printf("%ld, ", nacci);
 }
 }
 	printf("\n");

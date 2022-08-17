@@ -8,13 +8,20 @@
  */
 void fib(int n)
 {
-	long int m, nacci = 2, prev = 1;
+	int m;
+	long int nacci = 2, prev = 1;
 
 	for (m = 1; m <= n; m++)
 {
-	if (m <= 2)
+	if (m == n)
 {
-	printf("%ld, ", m);
+	nacci += prev;
+	prev = nacci - prev;
+	printf("%ld", nacci);
+}
+	else if (m <= 2)
+{
+	printf("%d, ", m);
 }
 	else
 {

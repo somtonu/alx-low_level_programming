@@ -17,3 +17,23 @@ int _isupper(int c)
 }
 	return (0);
 }
+
+/* Alternative Code */
+/*
+int _isupper(int c)
+{
+	char t = 'A';
+
+	for (; t <= 'Z'; t++)
+{
+	if (c != t)
+{
+	return (0);
+}
+	else
+{
+	return (1);
+}
+}
+	return (0);
+} */

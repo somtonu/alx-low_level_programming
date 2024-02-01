@@ -1,5 +1,5 @@
-/* #include "main.h"
-/**
+/** #include "main.h"
+ *
  * print_rev - print %s in rev
  * @s: string
  *

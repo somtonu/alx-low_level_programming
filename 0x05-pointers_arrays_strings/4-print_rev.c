@@ -19,21 +19,3 @@
 }
 	_putchar('\n');
 }
-*/
-#include <stdio.h>
-
-void print_rev(char *s)
-{
-	int len = 0;
-	int r;
-	int b;
-	for (r = 0; s[r] != '\0'; r++)
-{
-	len++;
-}
-	for (b = len - 1; b >= 0; b--)
-{
-	putchar(s[b]);
-}
-	putchar('\n');
-}
